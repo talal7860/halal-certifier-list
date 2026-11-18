@@ -11,11 +11,16 @@
       "name": "Canada",
       "file": "ca.json",
       "count": 7
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "file": "us.json",
+      "count": 8
     }
   ],
   "planned": [
     "GB",
-    "US",
     "MY"
   ]
 }
