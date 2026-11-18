@@ -8,6 +8,7 @@ Countries covered:
 |---|---|---|
 | Australia | 19 | The 18 Approved Islamic Organisations on the Department of Agriculture's halal red-meat export list, plus AFIC |
 | Canada | 7 | Certifiers active in Canada. Canada does not approve certifiers; CFIA only requires every halal claim to name one |
+| United States | 8 | Major US certifiers. The federal government does not approve certifiers; recognition shown is by New York State and foreign halal authorities |
 
 ## Project layout
 
@@ -16,6 +17,7 @@ index.html            The whole app: markup, styles and script in one file
 data/countries.json   Country menu: which countries have data, and which are planned
 data/ca.json          Canada dataset
 data/au.json          Australia dataset
+data/us.json          United States dataset
 netlify.toml          Netlify settings (static publish, cache headers)
 ```
 
@@ -92,7 +94,7 @@ A species block:
 ```jsonc
 {
   "hand_slaughter_required": "yes | no | unknown",
-  "basis": "certifier_policy | certifier_statement_in_press | plant_document | government_rule | industry_practice | none",
+  "basis": "certifier_policy | certifier_statement_in_press | third_party_report | plant_document | government_rule | industry_practice | none",
   "stunning": {
     "status": "not_allowed | post_cut_only | likely_not_allowed | conditional | reversible_allowed | allowed | unknown",
     "details": "Plain-language explanation"

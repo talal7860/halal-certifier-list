@@ -23,6 +23,7 @@
       "basis": [
         "certifier_policy",
         "certifier_statement_in_press",
+        "third_party_report",
         "plant_document",
         "government_rule",
         "industry_practice",

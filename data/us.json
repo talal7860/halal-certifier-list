@@ -1,0 +1,710 @@
+{
+  "meta": {
+    "schema_version": "1.1.0",
+    "country": "US",
+    "last_verified": "2026-11-18",
+    "license": "CC-BY-4.0",
+    "about_government_approval": "The US federal government does not approve halal certifiers, and USDA FSIS does not define what is halal. Some states regulate halal claims; New York has certifiers file with its Department of Agriculture and Markets, shown here as 'NYSDAM'. The other recognitions are by foreign halal authorities (Malaysia's JAKIM, Indonesia's BPJPH).",
+    "red_meat_note": "In the US, machine slaughter is used only for poultry, so beef, lamb and goat are cut by hand. Where a certifier publishes nothing species-specific, red-meat hand slaughter is recorded with basis 'industry_practice'.",
+    "poultry_note": "Most large US halal poultry plants use a mechanical blade after stunning. 'Zabiha' has no legal definition in the US, so it does not guarantee hand slaughter; check the certifier.",
+    "enums": {
+      "hand_slaughter_required": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "stunning.status": [
+        "not_allowed",
+        "post_cut_only",
+        "likely_not_allowed",
+        "conditional",
+        "reversible_allowed",
+        "allowed",
+        "unknown"
+      ],
+      "basis": [
+        "certifier_policy",
+        "certifier_statement_in_press",
+        "third_party_report",
+        "plant_document",
+        "government_rule",
+        "industry_practice",
+        "none"
+      ],
+      "evidence.type": [
+        "official",
+        "government",
+        "news",
+        "third_party"
+      ]
+    },
+    "disclaimer": "Compiled from public sources on the date above. Several US certifiers publish no written slaughter or stunning standard; 'unknown' means no reliable public source was found. Confirm with the certifier before relying on any field."
+  },
+  "certifiers": [
+    {
+      "id": "ifanca",
+      "name": "Islamic Food and Nutrition Council of America",
+      "acronym": "IFANCA",
+      "headquarters": "Chicago area, IL",
+      "website": "https://ifanca.org/",
+      "government_recognition": [
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body",
+          "authority_country": "MY",
+          "source_url": "https://cosmetic.chemlinked.com/expert-article/malaysias-list-of-recognized-foreign-halal-certification-bodies"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body (2024)",
+          "authority_country": "ID",
+          "source_url": "https://en.tempo.co/amp/1852850/five-us-halal-bodies-obtain-indonesias-accreditation"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "third_party_report",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Reported to accept reversible stunning such as electrical water-bath. No written IFANCA policy found online."
+        },
+        "evidence": [
+          {
+            "title": "Halal certifier ratings – al-m.ca",
+            "url": "https://al-m.ca/certifications/",
+            "publisher": "al-m.ca",
+            "type": "third_party",
+            "excerpt": "Rated 'caution': only IFANCA items labelled hand-slaughtered are acceptable."
+          },
+          {
+            "title": "Halal Food and Animal Welfare: Perspectives from the US",
+            "url": "https://www.halaltimes.com/halal-food-and-animal-welfare-perspectives-from-the-us",
+            "publisher": "The Halal Times",
+            "type": "news",
+            "excerpt": "IFANCA allows reversible stunning, e.g. electric or water bath."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Reported to accept reversible stunning. Red meat in the US is cut by hand; machine slaughter is used only for poultry."
+        },
+        "evidence": [
+          {
+            "title": "Hand Slaughter versus Machine Slaughter",
+            "url": "https://isahalal.com/news-events/blog/hand-slaughter-versus-machine-slaughter",
+            "publisher": "Islamic Services of America",
+            "type": "third_party",
+            "excerpt": "Machine slaughter is currently used only in poultry operations."
+          },
+          {
+            "title": "Halal Food and Animal Welfare: Perspectives from the US",
+            "url": "https://www.halaltimes.com/halal-food-and-animal-welfare-perspectives-from-the-us",
+            "publisher": "The Halal Times",
+            "type": "news",
+            "excerpt": "IFANCA allows reversible stunning, e.g. electric or water bath."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Reported to accept reversible stunning. Red meat in the US is cut by hand; machine slaughter is used only for poultry."
+        },
+        "evidence": [
+          {
+            "title": "Hand Slaughter versus Machine Slaughter",
+            "url": "https://isahalal.com/news-events/blog/hand-slaughter-versus-machine-slaughter",
+            "publisher": "Islamic Services of America",
+            "type": "third_party",
+            "excerpt": "Machine slaughter is currently used only in poultry operations."
+          },
+          {
+            "title": "Halal Food and Animal Welfare: Perspectives from the US",
+            "url": "https://www.halaltimes.com/halal-food-and-animal-welfare-perspectives-from-the-us",
+            "publisher": "The Halal Times",
+            "type": "news",
+            "excerpt": "IFANCA allows reversible stunning, e.g. electric or water bath."
+          }
+        ]
+      },
+      "contact": {
+        "email": "halal@ifanca.org",
+        "contact_form_url": "https://ifanca.org/contact/",
+        "phone": null
+      },
+      "logo_url": "https://ifanca.org/app/uploads/2023/02/logo-768x286.png",
+      "notes": "Certifies both machine- and hand-slaughtered poultry; look for 'hand slaughtered' on the label. Separate from IFANCC in Canada."
+    },
+    {
+      "id": "isa",
+      "name": "Islamic Services of America",
+      "acronym": "ISA",
+      "headquarters": "Cedar Rapids, IA",
+      "website": "https://isahalal.com/",
+      "government_recognition": [
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body",
+          "authority_country": "MY",
+          "source_url": "https://cosmetic.chemlinked.com/expert-article/malaysias-list-of-recognized-foreign-halal-certification-bodies"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body (2024)",
+          "authority_country": "ID",
+          "source_url": "https://en.tempo.co/amp/1852850/five-us-halal-bodies-obtain-indonesias-accreditation"
+        },
+        {
+          "authority": "NYSDAM (New York State Department of Agriculture and Markets) – halal certifier filing",
+          "authority_country": "US",
+          "source_url": "https://agriculture.ny.gov/system/files/documents/2025/11/halalcertifierregistrations_0.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "unknown",
+          "details": "ISA says its position on gas (CAS) stunning depends on ongoing research. No general poultry stunning rule published."
+        },
+        "evidence": [
+          {
+            "title": "Hand Slaughter versus Machine Slaughter",
+            "url": "https://isahalal.com/news-events/blog/hand-slaughter-versus-machine-slaughter",
+            "publisher": "Islamic Services of America",
+            "type": "official",
+            "excerpt": "ISA recognises both hand and machine slaughter under strict rules."
+          },
+          {
+            "title": "Gas Killing and its Halal Relevance in Poultry Processing",
+            "url": "https://isahalal.com/news-events/blog/gas-killing-and-its-halal-relevance-poultry-processing",
+            "publisher": "Islamic Services of America",
+            "type": "official",
+            "excerpt": "Whether ISA permits gas stunning depends on ongoing research."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy for this species."
+        },
+        "evidence": [
+          {
+            "title": "Hand Slaughter versus Machine Slaughter",
+            "url": "https://isahalal.com/news-events/blog/hand-slaughter-versus-machine-slaughter",
+            "publisher": "Islamic Services of America",
+            "type": "third_party",
+            "excerpt": "Machine slaughter is currently used only in poultry operations."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy for this species."
+        },
+        "evidence": [
+          {
+            "title": "Hand Slaughter versus Machine Slaughter",
+            "url": "https://isahalal.com/news-events/blog/hand-slaughter-versus-machine-slaughter",
+            "publisher": "Islamic Services of America",
+            "type": "third_party",
+            "excerpt": "Machine slaughter is currently used only in poultry operations."
+          }
+        ]
+      },
+      "contact": {
+        "email": "isa@isahalal.com",
+        "contact_form_url": "https://isahalal.com/contact",
+        "phone": "+1-319-362-0480"
+      },
+      "logo_url": "https://isahalal.com/application/themes/isa/img/logo.png",
+      "notes": "Publishes 'HS' standards with five classes for poultry and red meat to label the slaughter method used. Partner of HMCA in Canada."
+    },
+    {
+      "id": "ahf",
+      "name": "American Halal Foundation",
+      "acronym": "AHF",
+      "headquarters": "Tampa, FL",
+      "website": "https://halalfoundation.org/",
+      "government_recognition": [
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body",
+          "authority_country": "MY",
+          "source_url": "https://cosmetic.chemlinked.com/expert-article/malaysias-list-of-recognized-foreign-halal-certification-bodies"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body (2024)",
+          "authority_country": "ID",
+          "source_url": "https://en.tempo.co/amp/1852850/five-us-halal-bodies-obtain-indonesias-accreditation"
+        },
+        {
+          "authority": "NYSDAM (New York State Department of Agriculture and Markets) – halal certifier filing",
+          "authority_country": "US",
+          "source_url": "https://agriculture.ny.gov/system/files/documents/2025/11/halalcertifierregistrations_0.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Only reversible stunning is permitted, and it must not kill the animal before slaughter."
+        },
+        "evidence": [
+          {
+            "title": "AHF Halal Standards",
+            "url": "https://halalfoundation.org/ahf-halal-standards/",
+            "publisher": "American Halal Foundation",
+            "type": "official",
+            "excerpt": "Meat and poultry must be hand-slaughtered only; only reversible stunning permitted."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Only reversible stunning is permitted, and it must not kill the animal before slaughter."
+        },
+        "evidence": [
+          {
+            "title": "AHF Halal Standards",
+            "url": "https://halalfoundation.org/ahf-halal-standards/",
+            "publisher": "American Halal Foundation",
+            "type": "official",
+            "excerpt": "Meat and poultry must be hand-slaughtered only; only reversible stunning permitted."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Only reversible stunning is permitted, and it must not kill the animal before slaughter."
+        },
+        "evidence": [
+          {
+            "title": "AHF Halal Standards",
+            "url": "https://halalfoundation.org/ahf-halal-standards/",
+            "publisher": "American Halal Foundation",
+            "type": "official",
+            "excerpt": "Meat and poultry must be hand-slaughtered only; only reversible stunning permitted."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@halalfoundation.org",
+        "contact_form_url": "https://halalfoundation.org/contact/",
+        "phone": "+1-630-759-4981"
+      },
+      "logo_url": null,
+      "notes": "Its standard requires hand slaughter for both meat and poultry. Logo is served through an image proxy, so no direct file is linked."
+    },
+    {
+      "id": "iswa",
+      "name": "USA Halal Chamber of Commerce – ISWA Halal Certification",
+      "acronym": "ISWA Halal",
+      "headquarters": "Silver Spring, MD",
+      "website": "https://www.ushalalcertification.com/",
+      "government_recognition": [
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body (2024)",
+          "authority_country": "ID",
+          "source_url": "https://en.tempo.co/amp/1852850/five-us-halal-bodies-obtain-indonesias-accreditation"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Stunning is allowed under its guidelines. It checks that stunning does not kill and that animals can be revived."
+        },
+        "evidence": [
+          {
+            "title": "FAQs for consumers",
+            "url": "https://www.ushalalcertification.com/FAQ.html",
+            "publisher": "USA Halal Chamber of Commerce (ISWA Halal)",
+            "type": "official",
+            "excerpt": "Poultry: both hand and mechanical slaughter accepted, with Muslim supervisors present."
+          },
+          {
+            "title": "FAQs for consumers",
+            "url": "https://www.ushalalcertification.com/FAQ.html",
+            "publisher": "USA Halal Chamber of Commerce (ISWA Halal)",
+            "type": "official",
+            "excerpt": "Stunning allowed; checked so it does not kill and animals can be revived."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Stunning is allowed under its guidelines. It checks that stunning does not kill and that animals can be revived."
+        },
+        "evidence": [
+          {
+            "title": "FAQs for consumers",
+            "url": "https://www.ushalalcertification.com/FAQ.html",
+            "publisher": "USA Halal Chamber of Commerce (ISWA Halal)",
+            "type": "official",
+            "excerpt": "Beef and all other large animals are slaughtered by hand."
+          },
+          {
+            "title": "FAQs for consumers",
+            "url": "https://www.ushalalcertification.com/FAQ.html",
+            "publisher": "USA Halal Chamber of Commerce (ISWA Halal)",
+            "type": "official",
+            "excerpt": "Stunning allowed; checked so it does not kill and animals can be revived."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "Stunning is allowed under its guidelines. It checks that stunning does not kill and that animals can be revived."
+        },
+        "evidence": [
+          {
+            "title": "FAQs for consumers",
+            "url": "https://www.ushalalcertification.com/FAQ.html",
+            "publisher": "USA Halal Chamber of Commerce (ISWA Halal)",
+            "type": "official",
+            "excerpt": "Beef and all other large animals are slaughtered by hand."
+          },
+          {
+            "title": "FAQs for consumers",
+            "url": "https://www.ushalalcertification.com/FAQ.html",
+            "publisher": "USA Halal Chamber of Commerce (ISWA Halal)",
+            "type": "official",
+            "excerpt": "Stunning allowed; checked so it does not kill and animals can be revived."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": "https://www.ushalalcertification.com/contact-us/",
+        "phone": "+1-301-328-0592"
+      },
+      "logo_url": "https://www.ushalalcertification.com/wp-content/uploads/2025/05/USA-Halal-Logo.png",
+      "notes": "Some of its certified poultry plants slaughter by hand and some by machine; check the certificate for the plant."
+    },
+    {
+      "id": "hto",
+      "name": "Halal Transactions of Omaha",
+      "acronym": "HTO",
+      "headquarters": "Omaha, NE",
+      "website": "https://halaltransactions.org/",
+      "government_recognition": [
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body (2024)",
+          "authority_country": "ID",
+          "source_url": "https://agriexchange.apeda.gov.in/ImportRegulations/Indonesia%20Accredits%20Five%20US%20Halal%20Certifying%20BodiesJakartaIndonesiaID20240005.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No poultry slaughter or stunning policy published."
+        },
+        "evidence": [
+          {
+            "title": "HTO website",
+            "url": "https://halaltransactions.org/",
+            "publisher": "Halal Transactions of Omaha",
+            "type": "official",
+            "excerpt": "No slaughter-method or stunning rules on its site."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy for this species."
+        },
+        "evidence": [
+          {
+            "title": "Hand Slaughter versus Machine Slaughter",
+            "url": "https://isahalal.com/news-events/blog/hand-slaughter-versus-machine-slaughter",
+            "publisher": "Islamic Services of America",
+            "type": "third_party",
+            "excerpt": "Machine slaughter is currently used only in poultry operations."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "third_party_report",
+        "stunning": {
+          "status": "unknown",
+          "details": "Muslim technicians trained by HTO perform the cut manually at Greater Omaha Packing. No stunning policy published."
+        },
+        "evidence": [
+          {
+            "title": "Greater Omaha Packing listing",
+            "url": "https://www.zabihah.com/man/us/L3Pg65JiFO",
+            "publisher": "Zabihah.com",
+            "type": "third_party",
+            "excerpt": "HTO-trained Muslim technicians manually apply the halal procedure to beef."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@halaltransactions.org",
+        "contact_form_url": "https://halaltransactions.org/contact-us/",
+        "phone": "+1-402-572-6120"
+      },
+      "logo_url": "https://halaltransactions.org/wp-content/uploads/2020/04/cropped-0720df_a01cf19fedd74f888acec2cdbbd40bc7-2.gif",
+      "notes": "Large beef-export certifier (e.g. Greater Omaha Packing). Publishes no slaughter or stunning standard online."
+    },
+    {
+      "id": "hfsaa",
+      "name": "Halal Food Standards Alliance of America",
+      "acronym": "HFSAA",
+      "headquarters": "Oakland, CA",
+      "website": "https://www.hfsaa.org/",
+      "government_recognition": [
+        {
+          "authority": "NYSDAM (New York State Department of Agriculture and Markets) – halal certifier filing",
+          "authority_country": "US",
+          "source_url": "https://agriculture.ny.gov/system/files/documents/2025/11/halalcertifierregistrations_0.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "conditional",
+          "details": "Stunning highly discouraged. If used it must be reversible; captive bolt, gas (CAS), irreversible electric bath and gunshot are non-conforming. A certified retailer summarises it as no pre-slaughter stunning."
+        },
+        "evidence": [
+          {
+            "title": "About HFSAA – standards",
+            "url": "https://www.hfsaa.org/about",
+            "publisher": "HFSAA",
+            "type": "official",
+            "excerpt": "Slaughter by hand of a Muslim, not machine; stunning highly discouraged, must be reversible."
+          },
+          {
+            "title": "HFSAA 13-point standard (retailer summary)",
+            "url": "https://onestophalal.com/pages/halal-certification",
+            "publisher": "One Stop Halal (HFSAA-certified retailer)",
+            "type": "third_party",
+            "excerpt": "Lists 'no pre-slaughter stunning' among HFSAA's points."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "conditional",
+          "details": "Stunning highly discouraged. If used it must be reversible; captive bolt, gas (CAS), irreversible electric bath and gunshot are non-conforming. A certified retailer summarises it as no pre-slaughter stunning."
+        },
+        "evidence": [
+          {
+            "title": "About HFSAA – standards",
+            "url": "https://www.hfsaa.org/about",
+            "publisher": "HFSAA",
+            "type": "official",
+            "excerpt": "Slaughter by hand of a Muslim, not machine; stunning highly discouraged, must be reversible."
+          },
+          {
+            "title": "HFSAA 13-point standard (retailer summary)",
+            "url": "https://onestophalal.com/pages/halal-certification",
+            "publisher": "One Stop Halal (HFSAA-certified retailer)",
+            "type": "third_party",
+            "excerpt": "Lists 'no pre-slaughter stunning' among HFSAA's points."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "conditional",
+          "details": "Stunning highly discouraged. If used it must be reversible; captive bolt, gas (CAS), irreversible electric bath and gunshot are non-conforming. A certified retailer summarises it as no pre-slaughter stunning."
+        },
+        "evidence": [
+          {
+            "title": "About HFSAA – standards",
+            "url": "https://www.hfsaa.org/about",
+            "publisher": "HFSAA",
+            "type": "official",
+            "excerpt": "Slaughter by hand of a Muslim, not machine; stunning highly discouraged, must be reversible."
+          },
+          {
+            "title": "HFSAA 13-point standard (retailer summary)",
+            "url": "https://onestophalal.com/pages/halal-certification",
+            "publisher": "One Stop Halal (HFSAA-certified retailer)",
+            "type": "third_party",
+            "excerpt": "Lists 'no pre-slaughter stunning' among HFSAA's points."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@hfsaa.org",
+        "contact_form_url": "https://www.hfsaa.org/contact",
+        "phone": "+1-312-868-5038"
+      },
+      "logo_url": "https://images.squarespace-cdn.com/content/v1/68c6446c17a0081a0b00cc92/126550aa-69e7-489b-8a5d-06c1210ed070/Header+Banner+Logo+v2.png?format=1500w",
+      "notes": "Mechanical slaughter is listed as non-conforming for all species. Requires all four throat vessels to be cut."
+    },
+    {
+      "id": "hms",
+      "name": "Halal Monitoring Services (Shariah Board of America)",
+      "acronym": "HMS",
+      "headquarters": "Chicago, IL",
+      "website": "https://www.hmsusa.org/",
+      "government_recognition": [],
+      "poultry": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "About HMS",
+            "url": "https://hmsusa.org/about.html",
+            "publisher": "Halal Monitoring Services",
+            "type": "official",
+            "excerpt": "Certifies and monitors only hand-slaughtered halal meat, from slaughterhouse to store."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "About HMS",
+            "url": "https://hmsusa.org/about.html",
+            "publisher": "Halal Monitoring Services",
+            "type": "official",
+            "excerpt": "Certifies and monitors only hand-slaughtered halal meat, from slaughterhouse to store."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "About HMS",
+            "url": "https://hmsusa.org/about.html",
+            "publisher": "Halal Monitoring Services",
+            "type": "official",
+            "excerpt": "Certifies and monitors only hand-slaughtered halal meat, from slaughterhouse to store."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@hmsusa.org",
+        "contact_form_url": null,
+        "phone": "+1-773-764-8274"
+      },
+      "logo_url": null,
+      "notes": "Non-profit; services are free. Certifies businesses in 26 US states and 3 Canadian provinces."
+    },
+    {
+      "id": "hww",
+      "name": "Halal Watch World",
+      "acronym": "HWW",
+      "headquarters": "Albany area, NY",
+      "website": "https://halalwatch.us/",
+      "government_recognition": [
+        {
+          "authority": "NYSDAM (New York State Department of Agriculture and Markets) – halal certifier filing",
+          "authority_country": "US",
+          "source_url": "https://agriculture.ny.gov/system/files/documents/2025/11/halalcertifierregistrations_0.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published poultry stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "Truth: 'Machine Slaughtering' is ACTUALLY Halal",
+            "url": "https://www.halalwatch.us/is-machine-slaughter-halal/",
+            "publisher": "Halal Watch World",
+            "type": "official",
+            "excerpt": "Argues mechanical aid in poultry slaughter is permissible if all conditions are met."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy for this species."
+        },
+        "evidence": [
+          {
+            "title": "Hand Slaughter versus Machine Slaughter",
+            "url": "https://isahalal.com/news-events/blog/hand-slaughter-versus-machine-slaughter",
+            "publisher": "Islamic Services of America",
+            "type": "third_party",
+            "excerpt": "Machine slaughter is currently used only in poultry operations."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy for this species."
+        },
+        "evidence": [
+          {
+            "title": "Hand Slaughter versus Machine Slaughter",
+            "url": "https://isahalal.com/news-events/blog/hand-slaughter-versus-machine-slaughter",
+            "publisher": "Islamic Services of America",
+            "type": "third_party",
+            "excerpt": "Machine slaughter is currently used only in poultry operations."
+          }
+        ]
+      },
+      "contact": {
+        "email": "support@halalwatch.us",
+        "contact_form_url": "https://halalwatch.us/contact-us",
+        "phone": "+1-877-425-2599"
+      },
+      "logo_url": null,
+      "notes": "Publishes an article arguing machine slaughter of poultry is halal when all conditions are met."
+    }
+  ]
+}
