@@ -1,0 +1,1981 @@
+{
+  "meta": {
+    "schema_version": "1.1.0",
+    "country": "AU",
+    "last_verified": "2026-11-18",
+    "about_government_approval": "Australia approves Islamic organisations only for halal red meat exports. The Department of Agriculture's list of Approved Islamic Organisations (updated 8 July 2026) has 18 bodies, all included here. AFIC is added as a major domestic certifier that is not on that list. Domestic halal labelling is not government regulated.",
+    "red_meat_note": "For export red meat, the government halal program requires an authorised Muslim slaughterman to make the cut by hand, and allows only reversible stunning. Most Australian halal red meat is stunned; a few plants have state approval to skip stunning.",
+    "poultry_note": "Poultry is outside the government halal program. Most Australian halal chicken is machine-slaughtered after stunning. ANIC rejects CAS gas stunning; AFIC accepts it.",
+    "enums": {
+      "hand_slaughter_required": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "stunning.status": [
+        "not_allowed",
+        "post_cut_only",
+        "likely_not_allowed",
+        "conditional",
+        "reversible_allowed",
+        "allowed",
+        "unknown"
+      ],
+      "basis": [
+        "certifier_policy",
+        "certifier_statement_in_press",
+        "plant_document",
+        "government_rule",
+        "industry_practice",
+        "none"
+      ],
+      "evidence.type": [
+        "official",
+        "government",
+        "news",
+        "third_party"
+      ]
+    },
+    "disclaimer": "Compiled from public sources on the date above. Most Australian certifiers publish no written slaughter standard; 'unknown' means no reliable public source was found. Confirm with the certifier before relying on any field.",
+    "license": "CC-BY-4.0"
+  },
+  "certifiers": [
+    {
+      "id": "al-sadeq",
+      "name": "Al Sadeq Association",
+      "acronym": "Al Sadeq",
+      "headquarters": "Thomastown, VIC",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": null,
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "Approved for export red meat. No public website, contact details or slaughter policy found."
+    },
+    {
+      "id": "ahdaa",
+      "name": "Australian Halal Development and Accreditation",
+      "acronym": "AHDAA",
+      "headquarters": "Archerfield, QLD",
+      "website": "https://www.ahdaa.com.au/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body",
+          "authority_country": "ID",
+          "source_url": "https://www.dfat.gov.au/geo/indonesia/complying-indonesian-halal-requirements"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No poultry slaughter or stunning policy published. Poultry is outside the government red-meat halal program."
+        },
+        "evidence": [
+          {
+            "title": "AHDAA website",
+            "url": "https://www.ahdaa.com.au/",
+            "publisher": "AHDAA",
+            "type": "official",
+            "excerpt": "No poultry slaughter or stunning rules found on this page."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@ahdaa.com.au",
+        "contact_form_url": "https://www.ahdaa.com.au/contact-us-2/",
+        "phone": "+61 7 3275 1077"
+      },
+      "logo_url": "https://www.ahdaa.com.au/wp-content/uploads/2019/04/AHDAA_Logo.png",
+      "notes": "BPJPH accreditation scope includes slaughtering."
+    },
+    {
+      "id": "ahaa",
+      "name": "Australian Halal Authority and Advisers",
+      "acronym": "AHAA",
+      "headquarters": "Dallas, VIC",
+      "website": "https://halaladvisers.com.au/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body (May 2024 list)",
+          "authority_country": "MY",
+          "source_url": "https://www.ice.it/en/sites/default/files/inline-files/cblist-20may2024_3.pdf"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No poultry slaughter or stunning policy published. Poultry is outside the government red-meat halal program."
+        },
+        "evidence": [
+          {
+            "title": "AHAA website",
+            "url": "https://halaladvisers.com.au/",
+            "publisher": "AHAA",
+            "type": "official",
+            "excerpt": "No poultry slaughter or stunning rules found on this page."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@halaladvisers.com.au",
+        "contact_form_url": null,
+        "phone": "+61 3 9384 6939"
+      },
+      "logo_url": null,
+      "notes": "Contact details taken from JAKIM's recognised-body list; website could not be read."
+    },
+    {
+      "id": "ahfs",
+      "name": "Australian Halal Food Services",
+      "acronym": "AHFS",
+      "headquarters": "Springwood, QLD",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body",
+          "authority_country": "ID",
+          "source_url": "https://www.dfat.gov.au/geo/indonesia/complying-indonesian-halal-requirements"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": null,
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "BPJPH accreditation scope includes slaughtering. No public website or contact details found."
+    },
+    {
+      "id": "anic",
+      "name": "ANIC Halal Authority (Australian National Imams Council)",
+      "acronym": "ANIC",
+      "headquarters": "Chullora, NSW",
+      "website": "https://anichalal.org.au/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body (May 2024 list)",
+          "authority_country": "MY",
+          "source_url": "https://www.ice.it/en/sites/default/files/inline-files/cblist-20may2024_3.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "conditional",
+          "details": "Low-voltage water-bath stunning only, tested for reversibility. CAS gas stunning is rejected."
+        },
+        "evidence": [
+          {
+            "title": "ANIC Halal – Mechanical Slaughtering guideline",
+            "url": "https://anichalal.org.au/guidelines/mechanical-slaughtering/",
+            "publisher": "ANIC Halal Authority",
+            "type": "official",
+            "excerpt": "Mechanical rotary blade allowed with Tasmiyah; missed birds slaughtered by hand."
+          },
+          {
+            "title": "ANIC Halal – Mechanical Slaughtering guideline",
+            "url": "https://anichalal.org.au/guidelines/mechanical-slaughtering/",
+            "publisher": "ANIC Halal Authority",
+            "type": "official",
+            "excerpt": "Low-voltage water-bath stunning only (42–50 V), tested for reversibility."
+          },
+          {
+            "title": "Statement on CAS stunning in poultry (2023)",
+            "url": "https://anic.org.au/CAS-STUNNING-POULTRY-REPORT",
+            "publisher": "Australian National Imams Council",
+            "type": "official",
+            "excerpt": "Australian Fatwa Council: CAS gas stunning in its current form cannot be certified halal."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "conditional",
+          "details": "Stunning not recommended. If required, only a supervised reversible electrical stunner is allowed."
+        },
+        "evidence": [
+          {
+            "title": "ANIC Halal – Halal Slaughterhouse guideline",
+            "url": "https://anichalal.org.au/guidelines/halal-slaughterhouse/",
+            "publisher": "ANIC Halal Authority",
+            "type": "official",
+            "excerpt": "Stunning not recommended; if used, reversible electrical stunner only, supervised by a trained Muslim."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "conditional",
+          "details": "Pre-slaughter stunning not recommended. If used: head-only, reversible, non-penetrative, cut within 3–30 seconds."
+        },
+        "evidence": [
+          {
+            "title": "ANIC Halal – Mechanical Slaughtering guideline",
+            "url": "https://anichalal.org.au/guidelines/mechanical-slaughtering/",
+            "publisher": "ANIC Halal Authority",
+            "type": "official",
+            "excerpt": "ANIC does not recommend pre-slaughter stunning of cattle; penetrative stun not allowed."
+          },
+          {
+            "title": "ANIC Halal – Halal Slaughterhouse guideline",
+            "url": "https://anichalal.org.au/guidelines/halal-slaughterhouse/",
+            "publisher": "ANIC Halal Authority",
+            "type": "official",
+            "excerpt": "Stunning not recommended; if used, reversible electrical stunner only, supervised by a trained Muslim."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@anichalal.org.au",
+        "contact_form_url": "https://anichalal.org.au/contact-us/",
+        "phone": "+61 2 8377 4190"
+      },
+      "logo_url": "https://anichalal.org.au/wp-content/uploads/2017/03/ANIC_Halal_LogoSmall_PNG-300x300.png",
+      "notes": "ANIC's Fatwa Council ruled CAS gas-stunned poultry not halal in 2023; AFIC disputes this."
+    },
+    {
+      "id": "gahc",
+      "name": "Global Australian Halal Certification",
+      "acronym": "GAHC",
+      "headquarters": "Carlton, VIC",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "nsiregar@gahc.com.au",
+        "contact_form_url": null,
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "Email taken from an Indonesian MUI list (2021). No public website or slaughter policy found."
+    },
+    {
+      "id": "ghtc",
+      "name": "Global Halal Trade Centre",
+      "acronym": "GHTC",
+      "headquarters": "Sunnybank Hills, QLD",
+      "website": "https://globalhalal.com.au/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body",
+          "authority_country": "ID",
+          "source_url": "https://globalhalal.com.au/"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "GHTC requires manual knife slaughter. Stunning is optional but must be reversible and not cause death."
+        },
+        "evidence": [
+          {
+            "title": "Global Halal Trade Centre – home page",
+            "url": "https://globalhalal.com.au/",
+            "publisher": "GHTC",
+            "type": "official",
+            "excerpt": "Slaughter done manually with a sharp knife; stunning, if used, must be reversible."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "GHTC requires manual knife slaughter. Stunning is optional but must be reversible and not cause death."
+        },
+        "evidence": [
+          {
+            "title": "Global Halal Trade Centre – home page",
+            "url": "https://globalhalal.com.au/",
+            "publisher": "GHTC",
+            "type": "official",
+            "excerpt": "Slaughter done manually with a sharp knife; stunning, if used, must be reversible."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "GHTC requires manual knife slaughter. Stunning is optional but must be reversible and not cause death."
+        },
+        "evidence": [
+          {
+            "title": "Global Halal Trade Centre – home page",
+            "url": "https://globalhalal.com.au/",
+            "publisher": "GHTC",
+            "type": "official",
+            "excerpt": "Slaughter done manually with a sharp knife; stunning, if used, must be reversible."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@globalhalal.com.au",
+        "contact_form_url": "https://globalhalal.com.au/contact/",
+        "phone": "+61 419 183 175"
+      },
+      "logo_url": "https://globalhalal.com.au/wp-content/uploads/2025/06/GHTC-Logo-Final.webp",
+      "notes": "Its published rule (manual knife slaughter) is general, not species-specific."
+    },
+    {
+      "id": "halal-approval",
+      "name": "The Halal Approval",
+      "acronym": "THA",
+      "headquarters": "Auburn, NSW",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": null,
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "No public website, contact details or slaughter policy found."
+    },
+    {
+      "id": "halal-australia",
+      "name": "Halal Australia",
+      "acronym": "Halal Australia",
+      "headquarters": "Parramatta, NSW",
+      "website": "https://halal-australia.com.au/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No poultry slaughter or stunning policy published. Poultry is outside the government red-meat halal program."
+        },
+        "evidence": [
+          {
+            "title": "Halal Australia website",
+            "url": "https://halal-australia.com.au/",
+            "publisher": "Halal Australia",
+            "type": "official",
+            "excerpt": "No poultry slaughter or stunning rules found on this page."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@halal-australia.com.au",
+        "contact_form_url": "https://halal-australia.com.au/contact-us/",
+        "phone": "+61 2 9893 1890"
+      },
+      "logo_url": "https://halal-australia.com.au/wp-content/uploads/2017/10/logo.png",
+      "notes": "Runs a slaughtering certification scheme but publishes no slaughter or stunning rules. Does not certify restaurants or food trucks."
+    },
+    {
+      "id": "hca",
+      "name": "Halal Certification Authority Australia",
+      "acronym": "HCA",
+      "headquarters": "Sydney, NSW",
+      "website": "https://halalauthority.org/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body",
+          "authority_country": "ID",
+          "source_url": "https://www.dfat.gov.au/geo/indonesia/complying-indonesian-halal-requirements"
+        },
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body (May 2024 list)",
+          "authority_country": "MY",
+          "source_url": "https://www.ice.it/en/sites/default/files/inline-files/cblist-20may2024_3.pdf"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "certifier_statement_in_press",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published poultry stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "Halal: How your chicken is certified in the holy henhouse (Daily Telegraph, reposted)",
+            "url": "https://www.religiousforums.com/threads/the-halal-rort-on-australians-paying-an-islamic-religious-food-tax-without-knowing.153681/latest",
+            "publisher": "Daily Telegraph via forum repost",
+            "type": "news",
+            "excerpt": "HCA-certified chicken: Muslim slaughterman says Tasmiyah once when the killing machine starts."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@halalauthority.org",
+        "contact_form_url": "https://halalauthority.org/contact-us/",
+        "phone": "+61 2 9232 6731"
+      },
+      "logo_url": "https://halalauthority.org/wp-content/uploads/2016/07/wordpress_logo.png",
+      "notes": "Also claims GSO, MUIS, UAE and SMIIC accreditation on its website."
+    },
+    {
+      "id": "iccv",
+      "name": "Islamic Coordinating Council of Victoria",
+      "acronym": "ICCV",
+      "headquarters": "Airport West, VIC",
+      "website": "https://iccv.com.au/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body",
+          "authority_country": "ID",
+          "source_url": "https://www.dfat.gov.au/geo/indonesia/complying-indonesian-halal-requirements"
+        },
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body (May 2024 list)",
+          "authority_country": "MY",
+          "source_url": "https://www.ice.it/en/sites/default/files/inline-files/cblist-20may2024_3.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No poultry slaughter or stunning policy published. Poultry is outside the government red-meat halal program."
+        },
+        "evidence": [
+          {
+            "title": "ICCV website",
+            "url": "https://iccv.com.au/",
+            "publisher": "ICCV",
+            "type": "official",
+            "excerpt": "No poultry slaughter or stunning rules found on this page."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "office@iccv.com.au",
+        "contact_form_url": "https://iccv.com.au/contact/",
+        "phone": "+61 3 9380 5467"
+      },
+      "logo_url": "https://iccv.com.au/wp-content/uploads/2017/06/iccv-v3-6.png",
+      "notes": "Certifier for Meatco Australia (Mildura, Est. 84). Says it accredits 140+ halal slaughtermen, supervisors and inspectors."
+    },
+    {
+      "id": "nhasa",
+      "name": "National Halal Accreditation Services Australia",
+      "acronym": "NHASA",
+      "headquarters": "Dallas, VIC",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body",
+          "authority_country": "ID",
+          "source_url": "https://www.dfat.gov.au/geo/indonesia/complying-indonesian-halal-requirements"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "asad@nhasa.com.au",
+        "contact_form_url": null,
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "Email taken from Thailand's CICOT list (2025). No public slaughter policy found."
+    },
+    {
+      "id": "nha",
+      "name": "National Halal Authority",
+      "acronym": "NHA",
+      "headquarters": "Coburg North, VIC",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – accredited foreign halal certification body",
+          "authority_country": "ID",
+          "source_url": "https://www.dfat.gov.au/geo/indonesia/complying-indonesian-halal-requirements"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": null,
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "No public website, contact details or slaughter policy found."
+    },
+    {
+      "id": "perth-mosque",
+      "name": "Perth Mosque Incorporated",
+      "acronym": "PMI",
+      "headquarters": "Mount Lawley, WA",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body (May 2024 list)",
+          "authority_country": "MY",
+          "source_url": "https://www.ice.it/en/sites/default/files/inline-files/cblist-20may2024_3.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "perthmosque@hotmail.com",
+        "contact_form_url": null,
+        "phone": "+61 8 9328 8535"
+      },
+      "logo_url": null,
+      "notes": "Contact details taken from JAKIM's recognised-body list."
+    },
+    {
+      "id": "sichma",
+      "name": "Supreme Islamic Council of Halal Meat in Australia",
+      "acronym": "SICHMA",
+      "headquarters": "South Granville, NSW",
+      "website": "https://www.sichma.com.au/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body (May 2024 list)",
+          "authority_country": "MY",
+          "source_url": "https://www.ice.it/en/sites/default/files/inline-files/cblist-20may2024_3.pdf"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No poultry slaughter or stunning policy published. Poultry is outside the government red-meat halal program."
+        },
+        "evidence": [
+          {
+            "title": "SICHMA website",
+            "url": "https://www.sichma.com.au/",
+            "publisher": "SICHMA",
+            "type": "official",
+            "excerpt": "No poultry slaughter or stunning rules found on this page."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "halal@sichma.com.au",
+        "contact_form_url": "https://www.sichma.com.au/contact.html",
+        "phone": "1300 742 462"
+      },
+      "logo_url": "https://www.sichma.com.au/uploads/8/0/7/3/8073993/1401885872.png",
+      "notes": "One of Australia's largest export certifiers. Email taken from JAKIM's list; its website hides the address."
+    },
+    {
+      "id": "waha",
+      "name": "Western Australia Halal Authority",
+      "acronym": "WAHA",
+      "headquarters": "Maddington, WA",
+      "website": "http://www.halalbooklet.com/",
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No poultry slaughter or stunning policy published. Poultry is outside the government red-meat halal program."
+        },
+        "evidence": [
+          {
+            "title": "WAHA website",
+            "url": "http://www.halalbooklet.com/",
+            "publisher": "WAHA",
+            "type": "official",
+            "excerpt": "No poultry slaughter or stunning rules found on this page."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info-waha@westnet.com.au",
+        "contact_form_url": null,
+        "phone": "+61 8 9459 4216"
+      },
+      "logo_url": null,
+      "notes": "Contact details taken from Indonesian and Thai recognised-body lists."
+    },
+    {
+      "id": "wht",
+      "name": "WHT Certification Australia",
+      "acronym": "WHT",
+      "headquarters": "Weir Views, VIC",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        },
+        {
+          "authority": "CICOT (Central Islamic Committee of Thailand) – recognised foreign halal certification body (2025 list)",
+          "authority_country": "TH",
+          "source_url": "https://www.cicot.or.th/storages/contents/attachments/FHCBs_Recognition_of_CICOT_JULY___SEPTEMBER_2025_2.pdf"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": null,
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "No public website, contact details or slaughter policy found."
+    },
+    {
+      "id": "whcb",
+      "name": "World Halal Certification Body",
+      "acronym": "WHCB",
+      "headquarters": "Kilkenny, SA",
+      "website": null,
+      "government_recognition": [
+        {
+          "authority": "DAFF (Department of Agriculture, Fisheries and Forestry) – Approved Islamic Organisation (halal red meat export)",
+          "authority_country": "AU",
+          "source_url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No public website or poultry policy found."
+        },
+        "evidence": [
+          {
+            "title": "Approved Islamic Organisations list",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/list-islamic-halal-certification",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Listed as an AIO; no poultry policy available."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "government_rule",
+        "stunning": {
+          "status": "reversible_allowed",
+          "details": "The government halal program allows reversible stunning, and most Australian export plants stun. This certifier publishes no stricter rule."
+        },
+        "evidence": [
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Only authorised Muslim slaughtermen can perform halal slaughter of export red meat."
+          },
+          {
+            "title": "AQIS Meat Notice 2009/08 – Australian Government Authorised Halal Program",
+            "url": "https://www.agriculture.gov.au/biosecurity-trade/export/controlled-goods/meat/elmer-3/notices/2009/mn09-08",
+            "publisher": "Australian Government",
+            "type": "government",
+            "excerpt": "Stunning, if used, must be reversible (electric or percussive), with the halal cut made quickly after."
+          },
+          {
+            "title": "What is Kosher and Halal slaughter in Australia?",
+            "url": "https://kb.rspca.org.au/what-is-halal-slaughter-in-australia_116.html",
+            "publisher": "RSPCA Australia",
+            "type": "third_party",
+            "excerpt": "Most halal slaughter in Australia uses reversible stunning; a few plants are approved to skip it."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": null,
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "No public website, contact details or slaughter policy found."
+    },
+    {
+      "id": "afic",
+      "name": "Australian Federation of Islamic Councils – AFIC Halal",
+      "acronym": "AFIC",
+      "headquarters": "Zetland, NSW",
+      "website": "https://afic.com.au/",
+      "government_recognition": [],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "allowed",
+          "details": "AFIC certifies poultry stunned electrically or with CAS gas, provided birds are alive at slaughter."
+        },
+        "evidence": [
+          {
+            "title": "AFIC response to ANIC Halal Authority (2023)",
+            "url": "https://afic.com.au/wp-content/uploads/2023/05/Response-to-ANIC-Halal-Authority1.pdf",
+            "publisher": "AFIC",
+            "type": "official",
+            "excerpt": "AFIC rejects ANIC's CAS ruling; says electrical and CAS stunning are no different for poultry."
+          },
+          {
+            "title": "AFIC Halal Poultry Audit Reports – executive summary (2024)",
+            "url": "https://afic.com.au/wp-content/uploads/2024/02/AUDIT-REPORTS-Comprehensive-Executive-Summary-of-Halal-Poultry-Chicken-and-Turkey-1.pdf",
+            "publisher": "AFIC",
+            "type": "official",
+            "excerpt": "AFIC certifies poultry stunned electrically or by CAS, checking birds are alive at slaughter."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No red-meat policy published."
+        },
+        "evidence": []
+      },
+      "cow": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No red-meat policy published."
+        },
+        "evidence": []
+      },
+      "contact": {
+        "email": "info@afic.com.au",
+        "contact_form_url": "https://afic.com.au/contact-us/",
+        "phone": "+61 2 9319 6733"
+      },
+      "logo_url": "https://afic.com.au/wp-content/uploads/2020/03/header-logo.png",
+      "notes": "Not on the government's current list of approved Islamic organisations, so it cannot certify red meat for export. Major domestic certifier, including poultry."
+    }
+  ]
+}
