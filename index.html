@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halal Certifier Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: stamp-style masthead → country switch → filter bar → comparison matrix (summary) → certifier dossiers (detail) → sources note */
+:root {
+  --paper: #f3f5f2;
+  --surface: #ffffff;
+  --ink: #17231e;
+  --muted: #5a6962;
+  --line: #d3dbd5;
+  --accent: #1d5c45;
+  --accent-soft: #e3efe8;
+  --ok: #1d7a4b;   --ok-bg: #e2f3e9;
+  --warn: #8f5a00; --warn-bg: #fbefd9;
+  --bad: #a8261e;  --bad-bg: #fbe4e1;
+  --unk: #66726c;  --unk-bg: #eceeed;
+  --font-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --font-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 10px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1412; --surface: #161f1b; --ink: #e6eee9; --muted: #9babA3;
+    --line: #2a3631; --accent: #63c39a; --accent-soft: #1b2e26;
+    --ok: #62c891; --ok-bg: #173226; --warn: #e6ad4c; --warn-bg: #352812;
+    --bad: #f07b72; --bad-bg: #3a1a18; --unk: #9aa6a0; --unk-bg: #222b27;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1412; --surface: #161f1b; --ink: #e6eee9; --muted: #9baba3;
+  --line: #2a3631; --accent: #63c39a; --accent-soft: #1b2e26;
+  --ok: #62c891; --ok-bg: #173226; --warn: #e6ad4c; --warn-bg: #352812;
+  --bad: #f07b72; --bad-bg: #3a1a18; --unk: #9aa6a0; --unk-bg: #222b27;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 15px/1.55 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* Masthead: the one bold move, a double-ruled inspection stamp */
+header.mast { padding: 28px 0 18px; }
+.mast-row { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
+.stamp {
+  display: inline-flex; align-items: center; gap: 14px;
+  border: 3px solid var(--accent); border-radius: 14px;
+  padding: 6px; transform: rotate(-1.2deg);
+}
+.stamp-inner {
+  display: flex; align-items: center; gap: 14px;
+  border: 1.5px solid var(--accent); border-radius: 9px; padding: 8px 16px 8px 12px;
+}
+.stamp-code {
+  font: 700 44px/0.9 var(--font-display); color: var(--accent);
+  letter-spacing: 0.02em; min-width: 2.2ch; text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.stamp-text { display: grid; gap: 2px; }
+.stamp-title {
+  font: 700 26px/1 var(--font-display); text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--accent); margin: 0;
+}
+.stamp-sub { font: 600 13px/1.2 var(--font-display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+
+.country {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.country label { font-weight: 600; font-size: 13px; color: var(--muted); }
+select, input[type="search"] {
+  font: 500 15px var(--font-body); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 12px; min-height: 40px;
+}
+.btn { display: inline-flex; align-items: center;
+  font: 600 13px var(--font-body); color: var(--accent);
+  background: transparent; border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 12px; min-height: 40px; cursor: pointer;
+}
+.btn:hover { border-color: var(--accent); background: var(--accent-soft); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.lede { max-width: 68ch; color: var(--muted); margin: 14px 0 0; }
+.notice {
+  margin-top: 12px; padding: 10px 14px; border-radius: 8px;
+  background: var(--warn-bg); color: var(--warn); font-size: 14px; display: none;
+}
+.notice.show { display: block; }
+
+/* Filter bar */
+.filters {
+  position: sticky; top: 0; z-index: 5;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+}
+.filter-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip-toggle {
+  font: 600 13px var(--font-body); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 14px; cursor: pointer; min-height: 36px;
+}
+.chip-toggle[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.filter-row input[type="search"] { flex: 1 1 200px; min-width: 0; }
+.count { font-size: 13px; color: var(--muted); margin-left: auto; font-variant-numeric: tabular-nums; }
+
+/* Section headings */
+h2.sec {
+  font: 700 15px/1 var(--font-display); text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--muted); margin: 32px 0 12px; display: flex; gap: 10px; align-items: center;
+}
+h2.sec::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+/* Matrix */
+.matrix-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+table.matrix { width: 100%; border-collapse: collapse; min-width: 720px; }
+.matrix th, .matrix td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.matrix tr:last-child td { border-bottom: 0; }
+.matrix thead th {
+  font: 700 13px var(--font-display); text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);
+  background: var(--paper);
+}
+.matrix tbody tr { cursor: pointer; }
+.matrix tbody tr:hover td { background: var(--accent-soft); }
+.m-name { font-weight: 700; }
+.m-name small { display: block; font-weight: 400; color: var(--muted); font-size: 12.5px; }
+.cell { display: flex; flex-direction: column; gap: 5px; align-items: flex-start; }
+.rec-count { font: 700 20px/1 var(--font-display); font-variant-numeric: tabular-nums; }
+.rec-count small { font: 500 12px var(--font-body); color: var(--muted); display: block; margin-top: 3px; }
+
+/* Pills */
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: 600 12.5px/1.2 var(--font-body); padding: 4px 9px; border-radius: 999px;
+  white-space: nowrap;
+}
+.pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+.pill.ok { color: var(--ok); background: var(--ok-bg); }
+.pill.warn { color: var(--warn); background: var(--warn-bg); }
+.pill.bad { color: var(--bad); background: var(--bad-bg); }
+.pill.unk { color: var(--unk); background: var(--unk-bg); }
+.basis { font-size: 11.5px; color: var(--muted); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 10px; font-size: 13px; color: var(--muted); align-items: center; }
+
+/* Dossier cards */
+.cards { display: grid; gap: 18px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 20px; display: grid; gap: 16px; scroll-margin-top: 80px;
+}
+.card.flash { box-shadow: 0 0 0 3px var(--accent); transition: box-shadow 0.3s; }
+.card-head { display: flex; gap: 14px; align-items: flex-start; flex-wrap: wrap; }
+.logo {
+  width: 64px; height: 64px; flex: none; border-radius: 10px;
+  border: 2px solid var(--accent); display: grid; place-items: center; overflow: hidden;
+  background: var(--surface);
+}
+.logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.logo span { font: 700 18px/1 var(--font-display); color: var(--accent); letter-spacing: 0.04em; text-align: center; padding: 2px; }
+.card-title { flex: 1 1 260px; min-width: 0; }
+.card-title h3 { margin: 0; font: 700 26px/1.05 var(--font-display); letter-spacing: 0.01em; text-wrap: balance; }
+.card-title .meta { color: var(--muted); font-size: 14px; margin-top: 4px; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.recog { display: flex; flex-wrap: wrap; gap: 6px; }
+.recog a, .recog span {
+  font-size: 12.5px; font-weight: 600; padding: 4px 10px; border-radius: 6px;
+  border: 1px solid var(--accent); color: var(--accent); text-decoration: none; background: var(--accent-soft);
+}
+.recog .none { border-color: var(--line); color: var(--muted); background: transparent; font-weight: 500; }
+
+.species { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.sp {
+  border: 1px solid var(--line); border-radius: 8px; padding: 14px; display: grid; gap: 8px; align-content: start;
+}
+.sp h4 { margin: 0; font: 700 14px var(--font-display); text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+.sp-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.sp p { margin: 0; font-size: 14px; }
+details.ev summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--accent); }
+details.ev ul { margin: 8px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+details.ev li { font-size: 13.5px; border-left: 3px solid var(--line); padding-left: 10px; }
+details.ev li .src { color: var(--muted); font-size: 12.5px; }
+.tag {
+  display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 1px 6px; border-radius: 4px; background: var(--unk-bg); color: var(--unk); margin-right: 4px;
+}
+.tag.official, .tag.government { background: var(--ok-bg); color: var(--ok); }
+.tag.news { background: var(--warn-bg); color: var(--warn); }
+
+.contact { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; font-size: 14px; border-top: 1px solid var(--line); padding-top: 14px; }
+.contact .lbl { color: var(--muted); font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+.copy { font: 600 12px var(--font-body); padding: 3px 8px; border-radius: 6px; border: 1px solid var(--line); background: transparent; color: var(--accent); cursor: pointer; }
+.copy:hover { border-color: var(--accent); }
+.note { font-size: 13.5px; color: var(--muted); margin: 0; }
+
+.empty { padding: 28px; text-align: center; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: var(--radius); }
+
+footer.src { margin: 40px 0 48px; display: grid; gap: 10px; font-size: 13.5px; color: var(--muted); max-width: 80ch; }
+footer.src p { margin: 0; }
+footer.src strong { color: var(--ink); }
+
+@media (max-width: 560px) {
+  .stamp-code { font-size: 34px; }
+  .stamp-title { font-size: 21px; }
+  .count { margin-left: 0; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-row">
+      <div class="stamp" aria-hidden="false">
+        <div class="stamp-inner">
+          <div class="stamp-code" id="stampCode">CA</div>
+          <div class="stamp-text">
+            <h1 class="stamp-title">Halal Certifier Check</h1>
+            <div class="stamp-sub" id="stampSub">Slaughter · Stunning · Evidence</div>
+          </div>
+        </div>
+      </div>
+      <div class="country">
+        <label for="countrySelect">Country</label>
+        <select id="countrySelect"></select>
+        <label class="btn" for="fileInput" title="Load a JSON file in the same format">Load data file</label>
+        <input class="sr" type="file" id="fileInput" accept=".json,application/json">
+      </div>
+    </div>
+    <p class="lede" id="lede">Compare halal certifiers by how they slaughter poultry, goat and beef, and whether they allow stunning. Every answer links to its source.</p>
+    <div class="notice" id="notice" role="status"></div>
+  </div>
+</header>
+
+<div class="filters">
+  <div class="wrap filter-row" role="group" aria-label="Filters">
+    <button class="chip-toggle" id="fHand" aria-pressed="false" type="button">Hand-slaughtered poultry</button>
+    <button class="chip-toggle" id="fNoStun" aria-pressed="false" type="button">No pre-slaughter stunning</button>
+    <button class="chip-toggle" id="fRecog" aria-pressed="false" type="button">Government recognised</button>
+    <label class="sr" for="q">Search certifiers</label>
+    <input type="search" id="q" placeholder="Search name or city">
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<main class="wrap">
+  <h2 class="sec">At a glance</h2>
+  <div class="matrix-wrap">
+    <table class="matrix" aria-label="Certifier comparison">
+      <thead>
+        <tr>
+          <th scope="col">Certifier</th>
+          <th scope="col">Poultry</th>
+          <th scope="col">Goat / lamb</th>
+          <th scope="col">Beef</th>
+          <th scope="col">Recognised by</th>
+        </tr>
+      </thead>
+      <tbody id="matrixBody"></tbody>
+    </table>
+  </div>
+  <div class="legend">
+    <span class="pill ok">Meets strict standard</span>
+    <span class="pill warn">Machine or conditional</span>
+    <span class="pill bad">Stunning allowed</span>
+    <span class="pill unk">Not published</span>
+    <span>Select a row to open its details.</span>
+  </div>
+
+  <h2 class="sec">Certifier details</h2>
+  <div class="cards" id="cards"></div>
+
+  <footer class="src" id="footer"></footer>
+</main>
+
+<script>
+const COUNTRY_NAMES = {
+  CA: "Canada", AU: "Australia", GB: "United Kingdom", US: "United States",
+  MY: "Malaysia", AE: "United Arab Emirates", PK: "Pakistan", ID: "Indonesia", SA: "Saudi Arabia"
+};
+// Filled from data/countries.json at start-up.
+let PLANNED = [];
+const MANIFEST = {};   // code -> { name, file }
+const DATASETS = {};   // code -> loaded dataset
+
+const SPECIES = [
+  { key: "poultry", label: "Poultry" },
+  { key: "goat", label: "Goat / lamb" },
+  { key: "cow", label: "Beef" }
+];
+
+const HAND = {
+  yes: { cls: "ok", text: "Hand slaughter required" },
+  no: { cls: "warn", text: "Machine slaughter accepted" },
+  unknown: { cls: "unk", text: "Slaughter method not published" }
+};
+const HAND_SHORT = {
+  yes: { cls: "ok", text: "Hand" },
+  no: { cls: "warn", text: "Machine OK" },
+  unknown: { cls: "unk", text: "Method ?" }
+};
+const STUN = {
+  not_allowed: { cls: "ok", text: "No stunning" },
+  post_cut_only: { cls: "ok", text: "Stun after cut only" },
+  likely_not_allowed: { cls: "ok", text: "Likely no stunning" },
+  conditional: { cls: "warn", text: "Stunning conditional" },
+  reversible_allowed: { cls: "warn", text: "Reversible stun allowed" },
+  allowed: { cls: "bad", text: "Stunning allowed" },
+  unknown: { cls: "unk", text: "Stunning ?" }
+};
+const BASIS = {
+  certifier_policy: "Certifier's written policy",
+  certifier_statement_in_press: "Certifier statement in the press",
+  plant_document: "Document for one plant",
+  government_rule: "Government halal program rule",
+  industry_practice: "Industry practice, not certifier policy",
+  none: "No source found"
+};
+const NO_PRESTUN = new Set(["not_allowed", "post_cut_only", "likely_not_allowed"]);
+
+const state = { country: "CA", hand: false, nostun: false, recog: false, q: "" };
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const pill = (m) => `<span class="pill ${m.cls}">${esc(m.text)}</span>`;
+const shortAuthority = a => {
+  const s = String(a || "");
+  const cut = s.search(/ [–-] | \(/);
+  return cut > 0 ? s.slice(0, cut) : s;
+};
+const initials = c => esc((c.acronym || c.name || "?").slice(0, 6));
+
+function countryName(code) { return MANIFEST[code]?.name || COUNTRY_NAMES[code] || code; }
+
+function buildCountrySelect() {
+  const sel = $("countrySelect");
+  const codes = new Set([...Object.keys(MANIFEST), ...Object.keys(DATASETS), ...PLANNED]);
+  const sorted = [...codes].sort((a, b) => {
+    const da = (DATASETS[a] || MANIFEST[a]) ? 0 : 1, db = (DATASETS[b] || MANIFEST[b]) ? 0 : 1;
+    return da - db || countryName(a).localeCompare(countryName(b));
+  });
+  sel.innerHTML = sorted.map(code => {
+    const has = !!(DATASETS[code] || MANIFEST[code]);
+    const n = DATASETS[code]?.certifiers.length ?? MANIFEST[code]?.count ?? 0;
+    return `<option value="${esc(code)}" ${has ? "" : "disabled"}>${esc(countryName(code))}${has ? ` (${n})` : " – coming soon"}</option>`;
+  }).join("");
+  sel.value = state.country;
+}
+
+function passes(c) {
+  if (state.hand && c.poultry?.hand_slaughter_required !== "yes") return false;
+  if (state.nostun && !SPECIES.every(s => NO_PRESTUN.has(c[s.key]?.stunning?.status))) return false;
+  if (state.recog && !(c.government_recognition || []).length) return false;
+  if (state.q) {
+    const hay = `${c.name} ${c.acronym} ${c.headquarters}`.toLowerCase();
+    if (!hay.includes(state.q.toLowerCase())) return false;
+  }
+  return true;
+}
+
+function renderMatrix(list) {
+  $("matrixBody").innerHTML = list.length ? list.map(c => {
+    const cells = SPECIES.map(s => {
+      const sp = c[s.key] || {};
+      const h = HAND_SHORT[sp.hand_slaughter_required] || HAND_SHORT.unknown;
+      const st = STUN[sp.stunning?.status] || STUN.unknown;
+      return `<td><div class="cell">${pill(h)}${pill(st)}</div></td>`;
+    }).join("");
+    const rec = c.government_recognition || [];
+    return `<tr data-id="${esc(c.id)}" tabindex="0" aria-label="Open ${esc(c.name)} details">
+      <td class="m-name">${esc(c.acronym)}<small>${esc(c.name)}</small></td>
+      ${cells}
+      <td><div class="rec-count">${rec.length}<small>${rec.length ? esc(rec.map(r => shortAuthority(r.authority)).join(", ")) : "None found"}</small></div></td>
+    </tr>`;
+  }).join("") : `<tr><td colspan="5" class="empty">No certifiers match these filters.</td></tr>`;
+
+  $("matrixBody").querySelectorAll("tr[data-id]").forEach(tr => {
+    const go = () => openCard(tr.dataset.id);
+    tr.addEventListener("click", go);
+    tr.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+  });
+}
+
+function evidenceList(ev) {
+  if (!ev || !ev.length) return "";
+  return `<details class="ev"><summary>Evidence (${ev.length})</summary><ul>${ev.map(e => `
+    <li>
+      <span class="tag ${esc(e.type)}">${esc(e.type?.replace("_", " "))}</span>
+      <a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a>
+      <div>${esc(e.excerpt)}</div>
+      <div class="src">${esc(e.publisher)}</div>
+    </li>`).join("")}</ul></details>`;
+}
+
+function renderCards(list) {
+  if (!list.length) { $("cards").innerHTML = `<div class="empty">No certifiers match these filters. Turn a filter off to see more.</div>`; return; }
+  $("cards").innerHTML = list.map(c => {
+    const rec = c.government_recognition || [];
+    const recHtml = rec.length
+      ? rec.map(r => `<a href="${esc(r.source_url)}" target="_blank" rel="noopener" title="${esc(r.authority)}">${esc(shortAuthority(r.authority))} · ${esc(r.authority_country)}</a>`).join("")
+      : `<span class="none">No government recognition found</span>`;
+    const species = SPECIES.map(s => {
+      const sp = c[s.key] || {};
+      return `<div class="sp">
+        <h4>${s.label}</h4>
+        <div class="sp-row">${pill(HAND[sp.hand_slaughter_required] || HAND.unknown)}${pill(STUN[sp.stunning?.status] || STUN.unknown)}</div>
+        <p>${esc(sp.stunning?.details)}</p>
+        <div class="basis">Basis: ${esc(BASIS[sp.basis] || sp.basis)}</div>
+        ${evidenceList(sp.evidence)}
+      </div>`;
+    }).join("");
+    const ct = c.contact || {};
+    const contact = [
+      ct.email ? `<span><span class="lbl">Email</span> ${esc(ct.email)} <button class="copy" type="button" data-copy="${esc(ct.email)}">Copy</button></span>` : "",
+      ct.contact_form_url ? `<span><span class="lbl">Form</span> <a href="${esc(ct.contact_form_url)}" target="_blank" rel="noopener">Contact form</a></span>` : "",
+      ct.phone ? `<span><span class="lbl">Phone</span> ${esc(ct.phone)}</span>` : ""
+    ].join("");
+    const logo = c.logo_url
+      ? `<div class="logo"><img src="${esc(c.logo_url)}" alt="${esc(c.acronym)} logo" data-fallback="${initials(c)}"></div>`
+      : `<div class="logo" aria-hidden="true"><span>${initials(c)}</span></div>`;
+    return `<article class="card" id="c-${esc(c.id)}">
+      <div class="card-head">
+        ${logo}
+        <div class="card-title">
+          <h3>${esc(c.name)}</h3>
+          <div class="meta">
+            <span>${esc(c.acronym)}</span>
+            <span>${esc(c.headquarters)}</span>
+            ${c.website ? `<a href="${esc(c.website)}" target="_blank" rel="noopener">Website</a>` : ""}
+            ${c.logo_url ? `<a href="${esc(c.logo_url)}" target="_blank" rel="noopener">View logo</a>` : ""}
+          </div>
+        </div>
+      </div>
+      <div class="recog" aria-label="Government recognition">${recHtml}</div>
+      <div class="species">${species}</div>
+      ${c.notes ? `<p class="note">${esc(c.notes)}</p>` : ""}
+      <div class="contact">${contact || `<span class="note">No contact details published.</span>`}</div>
+    </article>`;
+  }).join("");
+
+  $("cards").querySelectorAll(".logo img").forEach(img => {
+    img.addEventListener("error", () => {
+      const span = document.createElement("span");
+      span.textContent = img.dataset.fallback;
+      img.replaceWith(span);
+    }, { once: true });
+  });
+  $("cards").querySelectorAll(".copy").forEach(b => {
+    b.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Copied"; }
+      catch { b.textContent = "Select text to copy"; }
+      setTimeout(() => { b.textContent = "Copy"; }, 1800);
+    });
+  });
+}
+
+function renderFooter(d) {
+  const m = d.meta || {};
+  $("footer").innerHTML = `
+    ${m.about_government_approval ? `<p><strong>About government approval.</strong> ${esc(m.about_government_approval)}</p>` : ""}
+    ${m.red_meat_note ? `<p><strong>Red meat.</strong> ${esc(m.red_meat_note)}</p>` : ""}
+    ${m.poultry_note ? `<p><strong>Poultry.</strong> ${esc(m.poultry_note)}</p>` : ""}
+    ${m.disclaimer ? `<p><strong>Accuracy.</strong> ${esc(m.disclaimer)}</p>` : ""}
+    ${m.last_verified ? `<p>Last verified ${esc(m.last_verified)} · Data schema ${esc(m.schema_version || "")}</p>` : ""}`;
+}
+
+function openCard(id) {
+  const el = document.getElementById("c-" + id);
+  if (!el) return;
+  el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  el.classList.add("flash");
+  setTimeout(() => el.classList.remove("flash"), 1400);
+}
+
+function render() {
+  const d = DATASETS[state.country];
+  if (!d) return;
+  $("stampCode").textContent = state.country;
+  $("stampSub").textContent = `${countryName(state.country)} · Slaughter · Stunning`;
+  const list = (d.certifiers || []).filter(passes);
+  $("count").textContent = `${list.length} of ${d.certifiers.length} certifiers`;
+  renderMatrix(list);
+  renderCards(list);
+  renderFooter(d);
+}
+
+async function loadCountry(code) {
+  if (DATASETS[code]) return DATASETS[code];
+  const entry = MANIFEST[code];
+  if (!entry) return null;
+  const res = await fetch(`data/${entry.file}`, { cache: "no-cache" });
+  if (!res.ok) throw new Error(`data/${entry.file} returned ${res.status}`);
+  const d = await res.json();
+  const err = validate(d);
+  if (err) throw new Error(`data/${entry.file}: ${err}`);
+  DATASETS[code] = d;
+  return d;
+}
+
+function showLoading(msg) {
+  $("matrixBody").innerHTML = `<tr><td colspan="5" class="empty">${esc(msg)}</td></tr>`;
+  $("cards").innerHTML = "";
+}
+
+async function setCountry(code) {
+  if (!MANIFEST[code] && !DATASETS[code]) return;
+  state.country = code;
+  $("countrySelect").value = code;
+  const h = "#" + code.toLowerCase();
+  if (location.hash !== h) history.replaceState(null, "", h);
+  if (!DATASETS[code]) {
+    showLoading(`Loading ${countryName(code)}…`);
+    try { await loadCountry(code); }
+    catch (ex) { showNotice(`Could not load data for ${countryName(code)}. ${ex.message}`, true); showLoading("No data loaded."); return; }
+  }
+  if (state.country === code) render();
+}
+
+function showNotice(msg, isError) {
+  const n = $("notice");
+  n.textContent = msg;
+  n.style.background = isError ? "var(--bad-bg)" : "var(--accent-soft)";
+  n.style.color = isError ? "var(--bad)" : "var(--accent)";
+  n.classList.add("show");
+}
+
+function validate(d) {
+  if (!d || typeof d !== "object") return "The file is not a JSON object.";
+  if (!d.meta || typeof d.meta.country !== "string" || d.meta.country.length !== 2) return "meta.country must be a two-letter country code, such as \"AU\".";
+  if (!Array.isArray(d.certifiers) || !d.certifiers.length) return "certifiers must be a non-empty list.";
+  for (const c of d.certifiers) {
+    if (!c.id || !c.name) return "Every certifier needs an id and a name.";
+    for (const s of SPECIES) if (!c[s.key]) return `Certifier "${c.name}" is missing the ${s.key} section.`;
+  }
+  return null;
+}
+
+function toggle(btn, key) {
+  btn.addEventListener("click", () => {
+    state[key] = !state[key];
+    btn.setAttribute("aria-pressed", String(state[key]));
+    render();
+  });
+}
+
+toggle($("fHand"), "hand");
+toggle($("fNoStun"), "nostun");
+toggle($("fRecog"), "recog");
+$("q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
+$("countrySelect").addEventListener("change", e => setCountry(e.target.value));
+$("fileInput").addEventListener("change", async e => {
+  const f = e.target.files?.[0];
+  if (!f) return;
+  try {
+    const d = JSON.parse(await f.text());
+    const err = validate(d);
+    if (err) { showNotice(`Could not load ${f.name}: ${err}`, true); return; }
+    d.meta.country = d.meta.country.toUpperCase();
+    DATASETS[d.meta.country] = d;
+    buildCountrySelect();
+    setCountry(d.meta.country);
+    showNotice(`Loaded ${d.certifiers.length} certifiers for ${countryName(d.meta.country)} from ${f.name}. This stays in your browser only.`, false);
+  } catch (ex) {
+    showNotice(`Could not read ${f.name}: it is not valid JSON.`, true);
+  } finally { e.target.value = ""; }
+});
+window.addEventListener("hashchange", () => {
+  const code = location.hash.slice(1).toUpperCase();
+  if ((MANIFEST[code] || DATASETS[code]) && code !== state.country) setCountry(code);
+});
+
+async function boot() {
+  showLoading("Loading certifier data…");
+  try {
+    const res = await fetch("data/countries.json", { cache: "no-cache" });
+    if (!res.ok) throw new Error(`data/countries.json returned ${res.status}`);
+    const m = await res.json();
+    (m.countries || []).forEach(c => { MANIFEST[c.code.toUpperCase()] = c; });
+    PLANNED = (m.planned || []).map(c => c.toUpperCase());
+  } catch (ex) {
+    const local = location.protocol === "file:";
+    showNotice(local
+      ? "Browsers block loading data files from a page opened directly from disk. Run a local server (for example: npx serve .) and open the address it prints."
+      : `Could not load the country list. ${ex.message}`, true);
+    showLoading("No data loaded.");
+    buildCountrySelect();
+    return;
+  }
+  const start = location.hash.slice(1).toUpperCase();
+  const first = MANIFEST[start] ? start : (MANIFEST.CA ? "CA" : Object.keys(MANIFEST)[0]);
+  buildCountrySelect();
+  await setCountry(first);
+}
+boot();
+</script>
+</body>
+</html>

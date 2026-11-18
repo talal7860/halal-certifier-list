@@ -1,0 +1,21 @@
+{
+  "countries": [
+    {
+      "code": "AU",
+      "name": "Australia",
+      "file": "au.json",
+      "count": 19
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "file": "ca.json",
+      "count": 7
+    }
+  ],
+  "planned": [
+    "GB",
+    "US",
+    "MY"
+  ]
+}

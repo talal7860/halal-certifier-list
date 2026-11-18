@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "schema_version": "1.1.0",
+    "country": "CA",
+    "last_verified": "2026-11-18",
+    "about_government_approval": "Canada does not approve or accredit halal certifiers. CFIA only requires that any food sold as halal names its certifying body. The 'government_recognition' field therefore lists recognition by a government authority: CFIA's list of Islamic bodies approved for halal meat exports to Malaysia, plus foreign halal authorities (JAKIM Malaysia, BPJPH Indonesia, SFDA Saudi Arabia, PNAC Pakistan).",
+    "red_meat_note": "In Canada, cattle, sheep and goats are cut by hand with a knife at every plant, halal or not. Automated blade lines exist only for poultry. Where a certifier publishes nothing species-specific, red-meat hand slaughter is recorded with basis 'industry_practice'.",
+    "enums": {
+      "hand_slaughter_required": [
+        "yes",
+        "no",
+        "unknown"
+      ],
+      "stunning.status": [
+        "not_allowed",
+        "post_cut_only",
+        "likely_not_allowed",
+        "conditional",
+        "reversible_allowed",
+        "allowed",
+        "unknown"
+      ],
+      "basis": [
+        "certifier_policy",
+        "certifier_statement_in_press",
+        "plant_document",
+        "government_rule",
+        "industry_practice",
+        "none"
+      ],
+      "evidence.type": [
+        "official",
+        "government",
+        "news",
+        "third_party"
+      ]
+    },
+    "disclaimer": "Compiled from public sources on the date above. Certifier policies change and several publish no written slaughter standard; 'unknown' means no reliable public source was found, not that the practice is absent. Confirm with the certifier before relying on any field.",
+    "license": "CC-BY-4.0"
+  },
+  "certifiers": [
+    {
+      "id": "hma",
+      "name": "Halal Monitoring Authority",
+      "acronym": "HMA",
+      "headquarters": "Scarborough, ON",
+      "website": "https://hmacanada.org/",
+      "government_recognition": [
+        {
+          "authority": "CFIA – Malaysia meat and poultry export requirements, Annex C (Islamic Bodies Approved)",
+          "authority_country": "CA",
+          "source_url": "https://inspection.canada.ca/en/exporting-food-plants-animals/food-exports/requirements-library/malaysia-meat-and-poultry/annex-c"
+        },
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body",
+          "authority_country": "MY",
+          "source_url": "https://emerhub.com/malaysia/jakim-recognized-foreign-halal-bodies/"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "conditional",
+          "details": "No stunning, or HMA-monitored low-voltage water-bath stunning. HMA's FAQ also permits regulated electric and controlled-atmosphere (CO2) stunning only under HMA's own rules."
+        },
+        "evidence": [
+          {
+            "title": "HMA FAQs",
+            "url": "https://hmacanada.org/faqs/",
+            "publisher": "HMA",
+            "type": "official",
+            "excerpt": "HMA does not accept machine slaughter of poultry; regulated electric and CAS stunning allowed under HMA rules."
+          },
+          {
+            "title": "HMA Application Form – Butcher (2024)",
+            "url": "https://hmacanada.org/wp-content/uploads/2024/11/HMA-Application-Form-Butcher-2024.pdf",
+            "publisher": "HMA",
+            "type": "official",
+            "excerpt": "Poultry facilities: hand slaughtered; no stunning or monitored low voltage water basin stunning."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "not_allowed",
+          "details": "No stunning of lamb, goat or sheep in any form."
+        },
+        "evidence": [
+          {
+            "title": "HMA FAQs",
+            "url": "https://hmacanada.org/faqs/",
+            "publisher": "HMA",
+            "type": "official",
+            "excerpt": "Lamb, goat and sheep: No stunning is allowed."
+          },
+          {
+            "title": "HMA Application Form – Other Products (2024)",
+            "url": "https://hmacanada.org/wp-content/uploads/2024/11/HMA-Application-Form-Other-Products-2024.pdf",
+            "publisher": "HMA",
+            "type": "official",
+            "excerpt": "Red meat (beef, veal, sheep, goat, lamb): hand slaughtered, no stunning, Muslim slaughtermen."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "post_cut_only",
+          "details": "No stunning before slaughter. Stunning after the cut is allowed where required, 10–15 seconds after the ritual cut, in some operations only."
+        },
+        "evidence": [
+          {
+            "title": "HMA FAQs",
+            "url": "https://hmacanada.org/faqs/",
+            "publisher": "HMA",
+            "type": "official",
+            "excerpt": "Veal and beef: no stunning prior to slaughter; post-slaughter stunning allowed if required."
+          },
+          {
+            "title": "HMA Guidelines – Red Meat Slaughter",
+            "url": "https://hmacanada.org/hma-guidelines/",
+            "publisher": "HMA",
+            "type": "official",
+            "excerpt": "No captive bolt or other stunning before slaughter; post-cut stunning only with halal authority approval."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@hmacanada.org",
+        "contact_form_url": "https://hmacanada.org/contact-us/",
+        "phone": "+1-416-731-2247"
+      },
+      "logo_url": "https://hmacanada.org/wp-content/uploads/2025/12/HMA-Canada.webp",
+      "notes": "Strictest published standard of the bodies listed. Inspectors present on site during halal production."
+    },
+    {
+      "id": "hmca",
+      "name": "Halal Montreal Certification Authority",
+      "acronym": "HMCA",
+      "headquarters": "Brossard, QC",
+      "website": "https://halalmontreal.com/",
+      "government_recognition": [
+        {
+          "authority": "CFIA – Malaysia meat and poultry export requirements, Annex C (Islamic Bodies Approved)",
+          "authority_country": "CA",
+          "source_url": "https://inspection.canada.ca/en/exporting-food-plants-animals/food-exports/requirements-library/malaysia-meat-and-poultry/annex-c"
+        },
+        {
+          "authority": "JAKIM (Department of Islamic Development Malaysia) – recognised foreign halal certification body",
+          "authority_country": "MY",
+          "source_url": "https://www.isahalal.com/news-events/isa-news-events/isa-and-hmca-attended-jakim-september-9-2021-halal-certification-bodies-virtual-conference"
+        },
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – recognised foreign halal institution; scope includes slaughtering",
+          "authority_country": "ID",
+          "source_url": "https://emerhub.com/indonesia/foreign-halal-certification-institutions-recognized-in-indonesia/"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No slaughter or stunning policy published on HMCA's website."
+        },
+        "evidence": [
+          {
+            "title": "HMCA website – Halal Marks",
+            "url": "https://halalmontreal.com/about/halal-marks/",
+            "publisher": "HMCA",
+            "type": "official",
+            "excerpt": "No mention of slaughter method or stunning."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "HMA FAQs (industry practice statement)",
+            "url": "https://hmacanada.org/faqs/",
+            "publisher": "HMA",
+            "type": "third_party",
+            "excerpt": "All red meat animals, halal or not, are hand slaughtered."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "HMA FAQs (industry practice statement)",
+            "url": "https://hmacanada.org/faqs/",
+            "publisher": "HMA",
+            "type": "third_party",
+            "excerpt": "All red meat animals, halal or not, are hand slaughtered."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": "https://halalmontreal.com/contact",
+        "phone": "+1-450-332-7072"
+      },
+      "logo_url": "https://halalmontreal.com/wp-content/themes/hmca/img/hmca-logo.webp",
+      "notes": "Export-focused certifier, partnered with Islamic Services of America (ISA). No email published; use the contact form."
+    },
+    {
+      "id": "ifancc",
+      "name": "Islamic Food and Nutrition Council of Canada",
+      "acronym": "IFANCC",
+      "headquarters": "Mississauga, ON",
+      "website": "https://www.ifancc.org/",
+      "government_recognition": [
+        {
+          "authority": "BPJPH (Indonesia Halal Product Assurance Agency) – recognised foreign halal institution; scope includes slaughtering",
+          "authority_country": "ID",
+          "source_url": "https://emerhub.com/indonesia/foreign-halal-certification-institutions-recognized-in-indonesia/"
+        },
+        {
+          "authority": "SFDA (Saudi Food and Drug Authority) – recognised halal certification body",
+          "authority_country": "SA",
+          "source_url": "https://api-halal.sfda.gov.sa/uploads/Clients/74593b74-3f4c-4644-ab90-51fe74150412.pdf"
+        },
+        {
+          "authority": "PNAC (Pakistan National Accreditation Council) – accredited halal certification body HCB 012",
+          "authority_country": "PK",
+          "source_url": "https://pnac.gov.pk/pdfFiles/HCB-012"
+        }
+      ],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "certifier_statement_in_press",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published poultry stunning policy found."
+        },
+        "evidence": [
+          {
+            "title": "New rule for halal labelling leaves industry open to deception, critics say",
+            "url": "https://www.theglobeandmail.com/amp/news/national/new-rule-for-halal-labelling-leaves-industry-open-to-deception-critics-say/article29254281/",
+            "publisher": "The Globe and Mail",
+            "type": "news",
+            "excerpt": "IFANCC considers machine-slaughtered chickens acceptable, per its director."
+          },
+          {
+            "title": "al-m.ca certifier list",
+            "url": "https://al-m.ca/certifications/",
+            "publisher": "al-m.ca",
+            "type": "third_party",
+            "excerpt": "Caution: only IFANCC items labelled hand-slaughtered are acceptable."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published goat/lamb stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "HMA FAQs (industry practice statement)",
+            "url": "https://hmacanada.org/faqs/",
+            "publisher": "HMA",
+            "type": "third_party",
+            "excerpt": "All red meat animals, halal or not, are hand slaughtered."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "plant_document",
+        "stunning": {
+          "status": "unknown",
+          "details": "No general policy published. At St. Helen's Meat Packers (Toronto, CFIA Est. 11 and 20), IFANCC states cattle are not stunned before slaughter."
+        },
+        "evidence": [
+          {
+            "title": "IFANCC Letter of Halal Confirmation – St. Helen's Meat Packers (2019)",
+            "url": "https://thehalalguys.com/wp-content/uploads/2019/06/Letter-of-Halal-Confirmation-2019-06-07-signed.pdf",
+            "publisher": "IFANCC",
+            "type": "official",
+            "excerpt": "Knife slaughter by a certified Muslim slaughterer; animals not stunned prior to slaughtering."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@ifancc.org",
+        "contact_form_url": "https://www.ifancc.org/contact/",
+        "phone": null
+      },
+      "logo_url": null,
+      "notes": "Certifies both machine- and hand-slaughtered poultry; check the product label for 'hand slaughtered'. No logo image could be retrieved from its website."
+    },
+    {
+      "id": "isna",
+      "name": "ISNA Halal Certification Agency (ISNA Canada)",
+      "acronym": "ISNA",
+      "headquarters": "Mississauga, ON",
+      "website": "https://isnahalal.com/",
+      "government_recognition": [],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "certifier_statement_in_press",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published poultry stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "Certification of 'lawful' foods for Muslims began one chicken at a time (Toronto Star, reproduced by HMA)",
+            "url": "https://hma.hmacanada.org/the-toronto-star/",
+            "publisher": "Toronto Star (hosted on a competitor's site)",
+            "type": "news",
+            "excerpt": "ISNA follows scholarly rulings that machine slaughter is acceptable in large-scale plants."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "likely_not_allowed",
+          "details": "ISNA's general zabihah guidelines say the animal should be conscious when slaughtered. No species-specific policy published."
+        },
+        "evidence": [
+          {
+            "title": "ISNA Halal FAQs",
+            "url": "https://isnahalal.com/faqs/",
+            "publisher": "ISNA Halal",
+            "type": "official",
+            "excerpt": "General guideline: the animal should be conscious; slaughter by a Muslim with a sharp blade."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "likely_not_allowed",
+          "details": "ISNA's general zabihah guidelines say the animal should be conscious when slaughtered. No species-specific policy published."
+        },
+        "evidence": [
+          {
+            "title": "ISNA Halal FAQs",
+            "url": "https://isnahalal.com/faqs/",
+            "publisher": "ISNA Halal",
+            "type": "official",
+            "excerpt": "General guideline: the animal should be conscious; slaughter by a Muslim with a sharp blade."
+          }
+        ]
+      },
+      "contact": {
+        "email": "halal@isnacanada.com",
+        "contact_form_url": "https://isnahalal.com/contact/",
+        "phone": "+1-905-403-8406 ext. 733/734"
+      },
+      "logo_url": "https://isnahalal.com/storage/2025/03/ISNA-HALAL-NEW-LOGO-BLACK-e1774373834191.png",
+      "notes": "Site forms also use info@isnahalal.com. The machine-slaughter evidence is an older newspaper report; confirm current poultry policy with ISNA."
+    },
+    {
+      "id": "chfca",
+      "name": "Canadian Halal Food Certifying Agency",
+      "acronym": "CHFCA",
+      "headquarters": "Mississauga, ON",
+      "website": "https://www.chfcahalal.com/",
+      "government_recognition": [],
+      "poultry": {
+        "hand_slaughter_required": "no",
+        "basis": "certifier_statement_in_press",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published poultry stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "CHFCA Halal Certification & Machine Slaughter (letter from CHFCA director reproduced)",
+            "url": "https://fatwa.ca/?p=3720",
+            "publisher": "fatwa.ca",
+            "type": "third_party",
+            "excerpt": "CHFCA certifies hand-held-knife (HHS) and automated-knife (AHS) lines with Muslim blessers; not tape-recorded blessings."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "CHFCA requires the animal not be dead before slaughter; no explicit stunning policy published."
+        },
+        "evidence": [
+          {
+            "title": "CHFCA – Halal",
+            "url": "https://www.chfcahalal.com/halal/",
+            "publisher": "CHFCA",
+            "type": "official",
+            "excerpt": "Sane adult Muslim slaughterer; animal must not be dead prior to slaughter."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "CHFCA requires the animal not be dead before slaughter; no explicit stunning policy published."
+        },
+        "evidence": [
+          {
+            "title": "CHFCA – Halal",
+            "url": "https://www.chfcahalal.com/halal/",
+            "publisher": "CHFCA",
+            "type": "official",
+            "excerpt": "Sane adult Muslim slaughterer; animal must not be dead prior to slaughter."
+          }
+        ]
+      },
+      "contact": {
+        "email": null,
+        "contact_form_url": "https://www.chfcahalal.com/contact/",
+        "phone": "+1-905-673-6500"
+      },
+      "logo_url": "https://www.chfcahalal.com/logo.jpg",
+      "notes": "Certifies Maple Lodge 'Zabiha Halal' and Kirkland halal chicken. Email address is obfuscated on its site; use the contact form."
+    },
+    {
+      "id": "chec",
+      "name": "Canada Halal Examination & Certification (Halal EC)",
+      "acronym": "CHEC",
+      "headquarters": "Mississauga, ON",
+      "website": "https://canadahalalec.com/",
+      "government_recognition": [],
+      "poultry": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "CHEC – Certification",
+            "url": "https://canadahalalec.com/certification/",
+            "publisher": "CHEC",
+            "type": "official",
+            "excerpt": "Only hand-slaughtered (Zabeeha by Hand) products accepted."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "CHEC – Certification",
+            "url": "https://canadahalalec.com/certification/",
+            "publisher": "CHEC",
+            "type": "official",
+            "excerpt": "Only hand-slaughtered (Zabeeha by Hand) products accepted."
+          },
+          {
+            "title": "CHEC – FAQs",
+            "url": "https://canadahalalec.com/faqs/",
+            "publisher": "CHEC",
+            "type": "official",
+            "excerpt": "Muslim slaughterer; one continuous cut with a sharp knife."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "certifier_policy",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "CHEC – Certification",
+            "url": "https://canadahalalec.com/certification/",
+            "publisher": "CHEC",
+            "type": "official",
+            "excerpt": "Only hand-slaughtered (Zabeeha by Hand) products accepted."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@canadahalalec.com",
+        "contact_form_url": "https://canadahalalec.com/contact-us/",
+        "phone": null
+      },
+      "logo_url": "https://canadahalalec.com/wp-content/uploads/2024/12/cropped-Halal-Ec-Logo.jpg",
+      "notes": "Logo URL taken from the site's share image (og:image) and may be a cropped version."
+    },
+    {
+      "id": "amcvh",
+      "name": "Association musulmane de la certification des viandes halal",
+      "acronym": "AMCVH",
+      "headquarters": "Laval, QC",
+      "website": "https://amcvh.ca/",
+      "government_recognition": [],
+      "poultry": {
+        "hand_slaughter_required": "unknown",
+        "basis": "none",
+        "stunning": {
+          "status": "unknown",
+          "details": "No slaughter or stunning policy retrievable from its website."
+        },
+        "evidence": [
+          {
+            "title": "AMCVH website",
+            "url": "https://amcvh.ca/",
+            "publisher": "AMCVH",
+            "type": "official",
+            "excerpt": "General statement only; no species-specific slaughter or stunning rules."
+          }
+        ]
+      },
+      "goat": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "HMA FAQs (industry practice statement)",
+            "url": "https://hmacanada.org/faqs/",
+            "publisher": "HMA",
+            "type": "third_party",
+            "excerpt": "All red meat animals, halal or not, are hand slaughtered."
+          }
+        ]
+      },
+      "cow": {
+        "hand_slaughter_required": "yes",
+        "basis": "industry_practice",
+        "stunning": {
+          "status": "unknown",
+          "details": "No published stunning policy."
+        },
+        "evidence": [
+          {
+            "title": "HMA FAQs (industry practice statement)",
+            "url": "https://hmacanada.org/faqs/",
+            "publisher": "HMA",
+            "type": "third_party",
+            "excerpt": "All red meat animals, halal or not, are hand slaughtered."
+          }
+        ]
+      },
+      "contact": {
+        "email": "info@amcvh.ca",
+        "contact_form_url": "https://amcvh.ca/elements/contact-us/",
+        "phone": null
+      },
+      "logo_url": "https://amcvh.ca/wp-content/uploads/2023/06/Logo_Halal-4web.png",
+      "notes": "Quebec-based; French-language site. Its 'L'abattage Halal' page could not be retrieved."
+    }
+  ]
+}
